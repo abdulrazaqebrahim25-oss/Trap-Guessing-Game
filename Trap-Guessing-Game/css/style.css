@@ -6,20 +6,32 @@ background-color: #00134D;
 .fullBorad{
     display: flex;
     flex-wrap: wrap;
+    flex-grow: unset;
 }
 
 .borad-pl1{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 325px;
+  width: 300px;
+  height: 300px;
+  background-color: #DD2D4A
+}
+
+.divider{
+
+    width: 10px;
+    height: 300px;
+    background: #00134D;
 }
 
 .borad-pl2{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 325px;
+  width: 300px;
+  height: 300px;
+  background-color: #F49CBB;
 }
 
 
@@ -29,4 +41,28 @@ background-color: #00134D;
   border: 3px solid black;
   font-size: 64px;
   text-align: center;
+}
+
+.controlButton{
+    width: 100px;
+    height: 50px;
+    background-color: #f4be2b; 
+    font-size: 26px;
+    padding: 12px 50px;
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.strat{
+    background-color: #f4be2b; 
+    font-size: 26px;
+    padding: 12px 50px;
+    border: none;
+    border-radius: 6px;
+    
 }
