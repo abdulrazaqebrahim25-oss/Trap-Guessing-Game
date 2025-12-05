@@ -1,18 +1,53 @@
+/* background */
+
 body{
 background-color: #00134D;
 
+/* part one players */
 }
 
+.players {
+    display: flex;
+    justify-content: row;
+    margin-bottom: 20px;
+}
+
+.player-box {
+    text-align: center;
+}
+
+.hearts {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column; 
+    
+}
+
+#p1-hearts{
+  background-color: #DD2D4A;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.ply1Box{
+
+  background-color: #DD2D4A
+
+
+
+}
+/* part two borad */
 .fullBorad{
     display: flex;
-    flex-wrap: wrap;
-    flex-grow: unset;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
 }
 
 .borad-pl1{
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   width: 300px;
   height: 300px;
   background-color: #DD2D4A
@@ -28,7 +63,6 @@ background-color: #00134D;
 .borad-pl2{
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   width: 300px;
   height: 300px;
   background-color: #F49CBB;
@@ -36,29 +70,25 @@ background-color: #00134D;
 
 
 .sqr {
-  width: 30%;
+  width: 33.333%;
   aspect-ratio: 1/1;
   border: 3px solid black;
+  box-sizing: border-box;
   font-size: 64px;
   text-align: center;
 }
 
-.controlButton{
-    width: 100px;
-    height: 50px;
-    background-color: #f4be2b; 
-    font-size: 26px;
-    padding: 12px 50px;
-    border: none;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* part three controlButton */
 
-    
+.controlButton{
+    margin-top: 20px;
+    text-align: center; 
+
 }
 
 .strat{
+    display: block;
+    margin: 0 auto;
     background-color: #f4be2b; 
     font-size: 26px;
     padding: 12px 50px;
