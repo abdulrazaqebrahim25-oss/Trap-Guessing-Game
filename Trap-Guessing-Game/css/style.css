@@ -2,42 +2,42 @@
 
 body{
 background-color: #00134D;
-
-/* part one players */
 }
-
+/* part one players */
 .players {
+    
     display: flex;
-    justify-content: row;
+    justify-content: center;
+    gap: 50px;
     margin-bottom: 20px;
 }
 
-.player-box {
-    text-align: center;
+.ply1Box, .ply2Box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 30px;
+    border-radius: 6px;
 }
+
+.ply1Box { background-color: #DD2D4A; }
+.ply2Box { background-color: #F49CBB; }
 
 .hearts {
-    font-size: 30px;
     display: flex;
-    flex-direction: column; 
-    
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
 }
 
-#p1-hearts{
-  background-color: #DD2D4A;
-  display: flex;
-  justify-content: flex-start;
+.player-name1,
+.player-name2 {
+    font-size: 30px;
+    color: white;
 }
 
-.ply1Box{
-
-  background-color: #DD2D4A
-
-
-
-}
 /* part two borad */
-.fullBorad{
+.fullBoard{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +45,7 @@ background-color: #00134D;
 
 }
 
-.borad-pl1{
+.board-pl1{
   display: flex;
   flex-wrap: wrap;
   width: 300px;
@@ -60,7 +60,7 @@ background-color: #00134D;
     background: #00134D;
 }
 
-.borad-pl2{
+.board-pl2{
   display: flex;
   flex-wrap: wrap;
   width: 300px;
@@ -96,3 +96,4 @@ background-color: #00134D;
     border-radius: 6px;
     
 }
+
