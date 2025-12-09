@@ -45,6 +45,13 @@ background-color: #00134D;
 
 }
 
+img{
+  display: flex;
+  aspect-ratio: 1/1;
+  width: 90%;
+  align-items: normal;
+}
+
 .board-pl1{
   display: flex;
   flex-wrap: wrap;
