@@ -155,3 +155,6 @@ function checkWin() {
     }
 }
 
+function endGame() {
+    squares.forEach(sqr => sqr.style.pointerEvents = "none");
+}
