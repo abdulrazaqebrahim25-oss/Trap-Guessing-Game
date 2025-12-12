@@ -44,3 +44,50 @@ function startGame() {
     disableBoard(2);
 } 
 
+function handleClick(e) {
+    const sqr = e.currentTarget;
+    const player = parseInt(sqr.dataset.player);
+    const index = parseInt(sqr.dataset.index);
+
+    // phase 1 — player 1 places bombs
+    if (phase === 1 && player === 1) {
+        if (p1Bomb.includes(index)) return;
+
+        p1Bomb.push(index);
+        sqr.style.backgroundColor = "#f0df1c";
+
+        if (p1Bomb.length === 3) {
+            hideBombs(1);
+            disableBoard(1);
+            enableBoard(2);
+            phase = 2;
+        }
+        return;
+    }
+
+    // phase 2 — player 2 places bombs
+    if (phase === 2 && player === 2) {
+        if (p2Bomb.includes(index)) return;
+
+        p2Bomb.push(index);
+        sqr.style.backgroundColor = "#f0df1c";
+
+        if (p2Bomb.length === 3) {
+            hideBombs(2);
+            disableBoard(2);
+            phase = 3;
+            turn = 1;
+
+            enableBoard(1);
+            enableBoard(2);
+        }
+        return;
+    }
+
+    // phase 3 — battle
+    if (phase === 3) {
+        if (player === turn) return;
+        attack(turn, player, index, sqr);
+    }
+}
+
