@@ -189,4 +189,39 @@ function checkWin() {
 
 function endGame() {
     squares.forEach(sqr => sqr.style.pointerEvents = "none");
+
+    startBtn.textContent = "Reset";  
+    startBtn.style.backgroundColor = "#ff4c4c"; // Optional
+    startBtn.onclick = resetGame;
+}
+
+
+function resetGame() {
+
+    phase = 1;
+    turn = 1;
+
+    
+    p1Bomb = [];
+    p2Bomb = [];
+
+
+    p1Hearts = 3;
+    p2Hearts = 3;
+
+    updateHearts(); 
+
+    
+    squares.forEach(sqr => {
+        sqr.style.backgroundColor = "";
+        sqr.style.pointerEvents = "auto";
+    });
+
+    
+    startBtn.textContent = "Start";
+    startBtn.style.backgroundColor = "#f4be2b";
+    startBtn.onclick = startGame;
+
+
+    startGame();
 }
