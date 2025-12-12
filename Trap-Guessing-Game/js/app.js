@@ -108,4 +108,13 @@ function attack(attacker, defenderPlayer, index, sqr) {
 
     updateHearts();
     checkWin();
+} 
+
+function hideBombs(player) {
+    squares.forEach(sqr => {
+        if (parseInt(sqr.dataset.player) === player) {
+            sqr.style.backgroundColor = "";
+        }
+    });
 }
+
