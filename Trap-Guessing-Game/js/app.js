@@ -37,3 +37,10 @@ squares.forEach(sqr => {
 
 /*-------------------------------- Functions --------------------------------*/
 
+function startGame() {
+    phase = 1;
+    turn = 1;
+    enableBoard(1);
+    disableBoard(2);
+} 
+
