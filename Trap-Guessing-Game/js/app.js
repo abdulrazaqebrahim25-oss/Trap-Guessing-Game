@@ -29,5 +29,11 @@ const p2Heart3 = document.getElementById("p2-hearts-3");
 
 /*----------------------------- Event Listeners -----------------------------*/
 
+startBtn.addEventListener("click", startGame);
+
+squares.forEach(sqr => {
+    sqr.addEventListener("click", handleClick);
+});
+
 /*-------------------------------- Functions --------------------------------*/
 
