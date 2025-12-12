@@ -134,3 +134,13 @@ function enableBoard(player) {
     });
 }
 
+function updateHearts() {
+    p1Heart1.style.visibility = p1Hearts >= 1 ? "visible" : "hidden";
+    p1Heart2.style.visibility = p1Hearts >= 2 ? "visible" : "hidden";
+    p1Heart3.style.visibility = p1Hearts >= 3 ? "visible" : "hidden";
+
+    p2Heart1.style.visibility = p2Hearts >= 1 ? "visible" : "hidden";
+    p2Heart2.style.visibility = p2Hearts >= 2 ? "visible" : "hidden";
+    p2Heart3.style.visibility = p2Hearts >= 3 ? "visible" : "hidden";
+}
+
