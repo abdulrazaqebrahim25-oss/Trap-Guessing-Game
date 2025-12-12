@@ -3,6 +3,13 @@
 body{
 background-color: #00134D;
 }
+
+#phase{
+  text-align:center;
+   color:white;
+  margin-bottom:20px;
+}
+
 /* part one players */
 .players {
     
