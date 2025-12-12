@@ -118,3 +118,19 @@ function hideBombs(player) {
     });
 }
 
+function disableBoard(player) {
+    squares.forEach(sqr => {
+        if (parseInt(sqr.dataset.player) === player) {
+            sqr.style.pointerEvents = "none";
+        }
+    });
+}
+
+function enableBoard(player) {
+    squares.forEach(sqr => {
+        if (parseInt(sqr.dataset.player) === player) {
+            sqr.style.pointerEvents = "auto";
+        }
+    });
+}
+
