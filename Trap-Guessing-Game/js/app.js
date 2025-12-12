@@ -91,3 +91,21 @@ function handleClick(e) {
     }
 }
 
+function attack(attacker, defenderPlayer, index, sqr) {
+    let hit = false;
+
+    if (attacker === 1) {
+        hit = p2Bomb.includes(index);
+        if (hit) p1Hearts--;
+        turn = 2;
+    } else {
+        hit = p1Bomb.includes(index);
+        if (hit) p2Hearts--;
+        turn = 1;
+    }
+
+    sqr.style.backgroundColor = hit ? "#ff4c4c" : "#6aff6a";
+
+    updateHearts();
+    checkWin();
+}
