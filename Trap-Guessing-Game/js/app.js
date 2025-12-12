@@ -144,3 +144,14 @@ function updateHearts() {
     p2Heart3.style.visibility = p2Hearts >= 3 ? "visible" : "hidden";
 }
 
+function checkWin() {
+    if (p1Hearts <= 0) {
+        alert("Player 2 Wins!");
+        endGame();
+    }
+    if (p2Hearts <= 0) {
+        alert("Player 1 Wins!");
+        endGame();
+    }
+}
+
