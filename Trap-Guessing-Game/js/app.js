@@ -27,6 +27,15 @@ const p2Heart1 = document.getElementById("p2-hearts-1");
 const p2Heart2 = document.getElementById("p2-hearts-2");
 const p2Heart3 = document.getElementById("p2-hearts-3");
 
+// level up
+
+/*-------------------------------- Hit Sound --------------------------------*/
+
+const hitSound = new Audio("./bombsound.mp3");
+hitSound.preload = "auto";
+hitSound.volume = 0.7;
+
+
 /*----------------------------- Event Listeners -----------------------------*/
 startBtn.addEventListener("click", startGame);
 
@@ -132,6 +141,11 @@ function attack(attacker, defenderPlayer, index, sqr) {
     sqr.style.backgroundColor = hit ? "#ff4c4c" : "#6aff6a";
 
     if (hit) {
+
+    hitSound.currentTime = 0;
+    hitSound.play();
+
+    
     sqr.classList.add("hit-bomb");
 
     setTimeout(() => {
