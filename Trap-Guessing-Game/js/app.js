@@ -131,6 +131,15 @@ function attack(attacker, defenderPlayer, index, sqr) {
 
     sqr.style.backgroundColor = hit ? "#ff4c4c" : "#6aff6a";
 
+    if (hit) {
+    sqr.classList.add("hit-bomb");
+
+    setTimeout(() => {
+        sqr.classList.remove("hit-bomb");
+    }, 400);
+}
+   
+
     updateHearts();
     checkWin();
 }
@@ -184,6 +193,8 @@ function checkWin() {
         phaseText.textContent = "🔥 Player 1 Wins!";
         endGame();
     }
+
+    
 }
 
 
@@ -191,7 +202,7 @@ function endGame() {
     squares.forEach(sqr => sqr.style.pointerEvents = "none");
 
     startBtn.textContent = "Reset";  
-    startBtn.style.backgroundColor = "#ff4c4c"; // Optional
+    startBtn.style.backgroundColor = "#0bed74ff"; 
     startBtn.onclick = resetGame;
 }
 
@@ -215,6 +226,8 @@ function resetGame() {
     squares.forEach(sqr => {
         sqr.style.backgroundColor = "";
         sqr.style.pointerEvents = "auto";
+        
+        
     });
 
     
@@ -225,3 +238,5 @@ function resetGame() {
 
     startGame();
 }
+
+
