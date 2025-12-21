@@ -138,14 +138,14 @@ function attack(attacker, defenderPlayer, index, sqr) {
         phaseText.textContent = "Player 1 Attack!";
     }
 
-    sqr.style.backgroundColor = hit ? "#ff4c4c" : "#6aff6a";
+    sqr.style.backgroundColor = hit ? "#000000ff" : "#6aff6a";
 
     if (hit) {
 
     hitSound.currentTime = 0;
     hitSound.play();
 
-    
+
     sqr.classList.add("hit-bomb");
 
     setTimeout(() => {
